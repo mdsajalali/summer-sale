@@ -169,11 +169,20 @@
   letter-spacing: 1px;
 }
 
-.furniture-bottom{
+.furniture-bottom {
   padding-bottom: 100px;
 }
 
 /* main section code end here */
+
+@media screen and (max-width: 1120px) {
+  .main-container {
+    padding: 0 50px;
+  }
+  .item-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 @media screen and (max-width: 1000px) {
   .hero-content {
@@ -182,6 +191,12 @@
 
   .discount .promo-title {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .item-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 870px) {
@@ -204,5 +219,11 @@
 
   .discount {
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .item-container {
+    grid-template-columns: 1fr;
   }
 }

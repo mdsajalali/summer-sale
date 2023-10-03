@@ -1,9 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
 }
- 
+
+.hero {
+  background: #f9f6e2;
+}
+
+.hero-container {
+  max-width: 1150px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80vh;
+}
+
+.hero-content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero-content .hero-heading {
+  color: #111;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.hero-content .hero-title {
+  color: #111;
+  font-size: 50px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.hero-content .discount-off {
+  color: #e527b2;
+  font-family: Work Sans;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.discount .promo-title {
+  color: #111;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.discount .promo-btn {
+  border-radius: 8px;
+  background: #e527b2;
+  color: white;
+  padding: 12px 25px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.discount .promo-btn:hover {
+  background: #149fe6;
+}
+
+.hero-img {
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-content {
+    max-width: 450px;
+  }
+
+  .discount .promo-title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .hero-wrapper {
+    flex-wrap: wrap;
+  }
+  .hero-img {
+    order: 1;
+    max-width: 500px;
+    margin: 50px auto;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+
+  .discount {
+    margin-bottom: 20px;
+  }
+}

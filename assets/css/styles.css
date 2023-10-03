@@ -7,11 +7,34 @@
   font-family: "Work Sans", sans-serif;
 }
 
+.btn {
+  border-radius: 8px;
+  background: #e527b2;
+  color: white;
+  padding: 12px 25px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.btn:hover {
+  background: #149fe6;
+}
+
+/* hero section code start here */
+
 .hero {
   background: #f9f6e2;
 }
 
-.hero-container {
+.hero-container,
+.main-container {
   max-width: 1150px;
   padding: 0 20px;
   margin: 0 auto;
@@ -62,26 +85,6 @@
   font-weight: 500;
 }
 
-.discount .promo-btn {
-  border-radius: 8px;
-  background: #e527b2;
-  color: white;
-  padding: 12px 25px;
-  outline: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-}
-
-.discount .promo-btn:hover {
-  background: #149fe6;
-}
-
 .hero-img {
   max-width: 700px;
   display: flex;
@@ -92,6 +95,85 @@
 .hero-img img {
   width: 100%;
 }
+
+/* hero section code end here */
+
+/* main section code start here */
+.main {
+  background: #f8f8f8;
+}
+.item-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.main-content {
+  text-align: center;
+}
+
+.main-container h1 {
+  color: #111;
+  font-size: 40px;
+  font-weight: 600;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+.items {
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.items-card img {
+  border-radius: 8px;
+  background: rgba(17, 17, 17, 0.05);
+  width: 200px;
+  height: 150px;
+  padding: 20px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.items-card .star {
+  margin-top: 10px;
+}
+
+.items-card .star i {
+  color: #ffc107;
+  margin-left: 3px;
+}
+
+.items-card .item-name {
+  color: #111;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.items-card .price {
+  color: rgba(17, 17, 17, 0.5);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.btn-add {
+  padding: 8px 18px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.btn-add:hover {
+  letter-spacing: 1px;
+}
+
+.furniture-bottom{
+  padding-bottom: 100px;
+}
+
+/* main section code end here */
 
 @media screen and (max-width: 1000px) {
   .hero-content {

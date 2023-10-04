@@ -103,6 +103,8 @@
 main {
   background: #f8f8f8;
   display: flex;
+  align-items: start;
+  justify-content: center;
 }
 
 .item-container {
@@ -296,7 +298,7 @@ hr {
 }
 
 /* hide show modal */
-.modal-show{
+.modal-show {
   display: none;
 }
 /* modal section code end here */

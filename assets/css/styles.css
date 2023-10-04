@@ -167,7 +167,7 @@ main {
 }
 
 .btn-add {
-  padding: 8px 18px;
+  padding: 7px 15px;
   margin-top: 10px;
   font-size: 15px;
 }
@@ -206,18 +206,23 @@ main {
   display: flex;
   border-radius: 8px;
   border: 1px solid rgba(17, 17, 17, 0.15);
-  background: #fff;
   margin-top: 10px;
 }
 
 .coupon-area input {
-  padding: 0 5px;
+  padding: 0 10px;
   font-size: 16px;
   width: 100%;
+  outline: none;
 }
 
 .coupon-area .coupon-btn {
   padding: 8px 15px;
+  border-radius: 0 8px 8px 0;
+  -webkit-border-radius: 0 8px 8px 0;
+  -moz-border-radius: 0 8px 8px 0;
+  -ms-border-radius: 0 8px 8px 0;
+  -o-border-radius: 0 8px 8px 0;
 }
 
 .purchase-card {
@@ -247,6 +252,10 @@ hr {
 
 .purchase-btn {
   width: 100%;
+}
+
+.purchase-btn:hover {
+  letter-spacing: 1px;
 }
 
 /* main section code end here */
@@ -356,6 +365,10 @@ hr {
 
   .discount {
     margin-bottom: 20px;
+  }
+
+  .main-container h1 {
+    font-size: 30px;
   }
 }
 

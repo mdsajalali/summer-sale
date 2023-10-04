@@ -1,45 +1,156 @@
-document.getElementById("getBtn").addEventListener("click", function () {
-  const itemPrices = document.getElementById("item-price").innerText;
-  const totalPrices = document.getElementById("total-price");
+const convertStringToNumber = (num) => parseFloat(num);
+const getIdByFunction = (id) => document.getElementById(id);
 
-  const total = document.getElementById("total");
-  console.log(total.innerText);
+let count = 0;
+const showShoppingProductItemFunc = (productName, showProductName) => {
+  const getProductName = getIdByFunction(productName).innerText;
+  const showProductNameDiv = getIdByFunction(showProductName);
+  const CREATE_i_TAG = document.createElement("p");
+  CREATE_i_TAG.classList.add("show-item-product");
+  CREATE_i_TAG.innerText = `${++count}. ${getProductName}`;
+  showProductNameDiv.appendChild(CREATE_i_TAG);
+};
 
-  totalPrices.innerText = itemPrices;
-  total.innerText = totalPrices;
+const totalProductPriceFunction = (productPrice, totalPrice) => {
+  const productPriceStr = getIdByFunction(productPrice).innerText;
+  const totalProductPriceStr = getIdByFunction(totalPrice).innerText;
 
-  alert("One item added");
+  const productPriceConvertNum = convertStringToNumber(productPriceStr);
+  const totalProductPriceConvertNum =
+    convertStringToNumber(totalProductPriceStr);
+
+  const totalProductPrice =
+    totalProductPriceConvertNum + productPriceConvertNum;
+
+  return totalProductPrice;
+};
+
+const productBuyNow = (
+  productPrice,
+  totalPrice,
+  productName,
+  showProductName,
+  totalShopping
+) => {
+  showShoppingProductItemFunc(productName, showProductName);
+
+  const totalProductPrice = totalProductPriceFunction(productPrice, totalPrice);
+
+  getIdByFunction(totalPrice).innerText = totalProductPrice.toFixed(2);
+
+  getIdByFunction(totalShopping).innerText = totalProductPrice.toFixed(2);
+};
+
+const couponApplyButton = () => {
+  const getTotalPriceStr = getIdByFunction("total-price").innerText;
+  const getTotalPrice = convertStringToNumber(getTotalPriceStr);
+
+  const getDiscountCoupon = getIdByFunction("couponCode").value;
+
+  if (getTotalPrice >= 200) {
+    //TODO: button disabled empty
+    // getIdByFunction("coupon-btn").disabled = false;
+    if (getDiscountCoupon === "SELL200") {
+      getIdByFunction("couponCode").value = "";
+      const discountPrice = getTotalPrice * (20 / 100);
+      getIdByFunction("discount").innerText = `-${discountPrice.toFixed(2)}`;
+      const totalShopping = getTotalPrice - discountPrice;
+      getIdByFunction("total").innerText = totalShopping;
+    } else {
+      alert("Your Coupon is not valid!🥵");
+      getIdByFunction("couponCode").value = "";
+    }
+  } else {
+    alert("You must shop for less than 200!😁");
+    getIdByFunction("couponCode").value = "";
+  }
+};
+getIdByFunction("coupon-btn").addEventListener("click", couponApplyButton);
+
+// make purchase
+// TODO button disabled empty
+getIdByFunction("make-purchase").addEventListener("click", () => {
+  getIdByFunction("modal-hide").style.display = "block";
 });
 
-document.getElementById("getBtn2").addEventListener("click", function () {
-  const itemPrices = document.getElementById("item-price").innerText;
-  const itemPrice = parseFloat(itemPrices);
-  const itemPrices2 = document.getElementById("item-price2").innerText;
-  const itemPrice2 = parseFloat(itemPrices2);
-  const totalPrices = document.getElementById("total-price");
-
-  const prevPrice = itemPrice + itemPrice2;
-  totalPrices.innerText = prevPrice;
-
-  alert("One item added");
-});
-document.getElementById("getBtn3").addEventListener("click", function () {
-  const itemPrices = document.getElementById("item-price").innerText;
-  const itemPrice = parseFloat(itemPrices);
-  const itemPrices2 = document.getElementById("item-price2").innerText;
-  const itemPrice2 = parseFloat(itemPrices2);
-  const itemPrices3 = document.getElementById("item-price3").innerText;
-  const itemPrice3 = parseFloat(itemPrices3);
-  const totalPrices = document.getElementById("total-price");
-
-  const prevPrice = itemPrice + itemPrice2 + itemPrice3;
-  console.log(prevPrice);
-  totalPrices.innerText = prevPrice;
-
-  alert("One item added");
-});
-
-function modal() {
-  const modalShow = document.getElementById("modal-hide");
-   modalShow.style.display = "block"
-}
+getIdByFunction("getBtn1").addEventListener("click", () =>
+  productBuyNow(
+    "item-price1",
+    "total-price",
+    "product-name1",
+    "show-item-ui",
+    "total"
+  )
+);
+getIdByFunction("getBtn2").addEventListener("click", () =>
+  productBuyNow(
+    "item-price2",
+    "total-price",
+    "product-name2",
+    "show-item-ui",
+    "total"
+  )
+);
+getIdByFunction("getBtn3").addEventListener("click", () =>
+  productBuyNow(
+    "item-price3",
+    "total-price",
+    "product-name3",
+    "show-item-ui",
+    "total"
+  )
+);
+getIdByFunction("getBtn4").addEventListener("click", () =>
+  productBuyNow(
+    "item-price4",
+    "total-price",
+    "product-name4",
+    "show-item-ui",
+    "total"
+  )
+);
+getIdByFunction("getBtn5").addEventListener("click", () =>
+  productBuyNow(
+    "item-price5",
+    "total-price",
+    "product-name5",
+    "show-item-ui",
+    "total"
+  )
+);
+getIdByFunction("getBtn6").addEventListener("click", () =>
+  productBuyNow(
+    "item-price6",
+    "total-price",
+    "product-name6",
+    "show-item-ui",
+    "total"
+  )
+);
+getIdByFunction("getBtn7").addEventListener("click", () =>
+  productBuyNow(
+    "item-price7",
+    "total-price",
+    "product-name7",
+    "show-item-ui",
+    "total"
+  )
+);
+getIdByFunction("getBtn8").addEventListener("click", () =>
+  productBuyNow(
+    "item-price8",
+    "total-price",
+    "product-name8",
+    "show-item-ui",
+    "total"
+  )
+);
+getIdByFunction("getBtn9").addEventListener("click", () =>
+  productBuyNow(
+    "item-price9",
+    "total-price",
+    "product-name9",
+    "show-item-ui",
+    "total"
+  )
+);

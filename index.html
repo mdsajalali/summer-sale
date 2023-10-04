@@ -54,9 +54,9 @@
                     <i class="bi bi-star"></i>
                     <i class="bi bi-star"></i>
                   </div>
-                  <h2 class="item-name">K. Accessories</h2>
-                  <p class="price"><span id="item-price">39.00</span> TK</p>
-                  <button class="btn btn-add" id="getBtn">Add To Cart</button>
+                  <h2 class="item-name" id="product-name1">K. Accessories</h2>
+                  <p class="price"><span id="item-price1">39.00</span> TK</p>
+                  <button class="btn btn-add" id="getBtn1">Add To Cart</button>
                 </div>
               </div>
               <div class="items">
@@ -68,7 +68,9 @@
                     <i class="bi bi-star"></i>
                     <i class="bi bi-star"></i>
                   </div>
-                  <h2 class="item-name">K. Accessories</h2>
+                  <h2 class="item-name2" id="product-name2">
+                    K.N. Accessories
+                  </h2>
                   <p class="price"><span id="item-price2">25.00</span> TK</p>
                   <button class="btn btn-add" id="getBtn2">Add To Cart</button>
                 </div>
@@ -83,7 +85,7 @@
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star"></i>
                   </div>
-                  <h2 class="item-name">Home Cooker</h2>
+                  <h2 class="item-name" id="product-name3">Home Cooker</h2>
                   <p class="price"><span id="item-price3">49.00</span> TK</p>
                   <button class="btn btn-add" id="getBtn3">Add To Cart</button>
                 </div>
@@ -108,9 +110,9 @@
                     <i class="bi bi-star"></i>
                     <i class="bi bi-star"></i>
                   </div>
-                  <h2 class="item-name">Sports Back Cap</h2>
-                  <p class="price">49.00 TK</p>
-                  <button class="btn btn-add">Add To Cart</button>
+                  <h2 class="item-name" id="product-name4">Sports Back Cap</h2>
+                  <p class="price" id="item-price4">49.00 TK</p>
+                  <button class="btn btn-add" id="getBtn4">Add To Cart</button>
                 </div>
               </div>
               <div class="items">
@@ -123,9 +125,9 @@
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star"></i>
                   </div>
-                  <h2 class="item-name">Full Jersey Set</h2>
-                  <p class="price">69.00 TK</p>
-                  <button class="btn btn-add">Add To Cart</button>
+                  <h2 class="item-name" id="product-name5">Full Jersey Set</h2>
+                  <p class="price" id="item-price5">69.00 TK</p>
+                  <button id="getBtn5" class="btn btn-add">Add To Cart</button>
                 </div>
               </div>
               <div class="items">
@@ -138,9 +140,9 @@
                     <i class="bi bi-star"></i>
                     <i class="bi bi-star"></i>
                   </div>
-                  <h2 class="item-name">Sports cates</h2>
-                  <p class="price">159.00 TK</p>
-                  <button class="btn btn-add">Add To Cart</button>
+                  <h2 id="product-name6" class="item-name">Sports cates</h2>
+                  <p id="item-price6" class="price">159.00 TK</p>
+                  <button id="getBtn6" class="btn btn-add">Add To Cart</button>
                 </div>
               </div>
             </div>
@@ -163,9 +165,11 @@
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star"></i>
                   </div>
-                  <h2 class="item-name">Single Relax Chair</h2>
-                  <p class="price">185.00 TK</p>
-                  <button class="btn btn-add">Add To Cart</button>
+                  <h2 id="product-name7" class="item-name">
+                    Single Relax Chair
+                  </h2>
+                  <p id="item-price7" class="price">185.00 TK</p>
+                  <button id="getBtn7" class="btn btn-add">Add To Cart</button>
                 </div>
               </div>
               <div class="items">
@@ -178,9 +182,9 @@
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                   </div>
-                  <h2 class="item-name">Children play</h2>
-                  <p class="price">299.00 TK</p>
-                  <button class="btn btn-add">Add To Cart</button>
+                  <h2 id="product-name8" class="item-name">Children play</h2>
+                  <p id="item-price8" class="price">299.00 TK</p>
+                  <button id="getBtn8" class="btn btn-add">Add To Cart</button>
                 </div>
               </div>
               <div class="items">
@@ -193,9 +197,9 @@
                     <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"></i>
                   </div>
-                  <h2 class="item-name">Flexible Sofa</h2>
-                  <p class="price">339.00 TK</p>
-                  <button class="btn btn-add">Add To Cart</button>
+                  <h2 id="product-name9" class="item-name">Flexible Sofa</h2>
+                  <p id="item-price9" class="price">339.00 TK</p>
+                  <button id="getBtn9" class="btn btn-add">Add To Cart</button>
                 </div>
               </div>
             </div>
@@ -209,27 +213,34 @@
         <div class="coupon">
           <h1>Have coupon?</h1>
           <div class="coupon-area">
-            <input type="text" placeholder="Coupon code" />
-            <button class="btn coupon-btn">Apply</button>
+            <input id="couponCode" type="text" placeholder="Coupon code" />
+            <button class="btn coupon-btn" id="coupon-btn">Apply</button>
+            <!--  -->
           </div>
         </div>
         <div class="purchase-card">
           <div class="product-title">
-            <p>1. Home Cooker</p>
-            <p>2. Home Cooker</p>
-            <p>3. Home Cooker</p>
-            <hr />
+            <h5>Product Items</h5>
+            <div id="show-item-ui"></div>
             <p>
               Total price :
               <span class="product-price"
-                ><span id="total-price">257.00</span>TK</span
+                ><span id="total-price">00</span>TK</span
               >
             </p>
-            <p>Discount : <span class="product-price">51.40TK</span></p>
-            <p>Total : <span class="product-price" ><span id="total">205.00</span>TK</span></p>
+            <p>
+              Discount :
+              <span class="product-price" id="discount">00TK</span>
+            </p>
+            <p>
+              Total :
+              <span class="product-price"><span id="total">00</span>TK</span>
+            </p>
             <hr />
           </div>
-          <button class="btn purchase-btn" onclick="modal()">Make Purchase</button>
+          <button class="btn purchase-btn" id="make-purchase">
+            Make Purchase
+          </button>
         </div>
       </div>
     </main>

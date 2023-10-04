@@ -217,6 +217,7 @@ main {
 }
 
 .coupon-area .coupon-btn {
+  opacity: 5%;
   padding: 8px 15px;
   border-radius: 0 8px 8px 0;
   -webkit-border-radius: 0 8px 8px 0;
@@ -251,6 +252,7 @@ hr {
 }
 
 .purchase-btn {
+  opacity: 5%;
   width: 100%;
 }
 
@@ -394,4 +396,8 @@ hr {
   .product-container {
     max-width: 300px;
   }
+}
+
+.show-item-product {
+  font-style: italic;
 }

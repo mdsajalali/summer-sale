@@ -25,6 +25,15 @@ const totalProductPriceFunction = (productPrice, totalPrice) => {
   return totalProductPrice;
 };
 
+const disabledButtonFunction = (totalPrice, rangePrice, btnId) => {
+  if (totalPrice > rangePrice) {
+    getIdByFunction(btnId).disabled = false;
+    const btn = getIdByFunction(btnId);
+    btn.style.opacity = "100%";
+    btn.style.backgroundColor = "#e527b2";
+  }
+};
+
 const productBuyNow = (
   productPrice,
   totalPrice,
@@ -36,8 +45,10 @@ const productBuyNow = (
 
   const totalProductPrice = totalProductPriceFunction(productPrice, totalPrice);
 
-  getIdByFunction(totalPrice).innerText = totalProductPrice.toFixed(2);
+  disabledButtonFunction(totalProductPrice, 200, "coupon-btn");
+  disabledButtonFunction(totalProductPrice, 0, "make-purchase");
 
+  getIdByFunction(totalPrice).innerText = totalProductPrice.toFixed(2);
   getIdByFunction(totalShopping).innerText = totalProductPrice.toFixed(2);
 };
 
@@ -47,28 +58,19 @@ const couponApplyButton = () => {
 
   const getDiscountCoupon = getIdByFunction("couponCode").value;
 
-  if (getTotalPrice >= 200) {
-    //TODO: button disabled empty
-    // getIdByFunction("coupon-btn").disabled = false;
-    if (getDiscountCoupon === "SELL200") {
-      getIdByFunction("couponCode").value = "";
-      const discountPrice = getTotalPrice * (20 / 100);
-      getIdByFunction("discount").innerText = `-${discountPrice.toFixed(2)}`;
-      const totalShopping = getTotalPrice - discountPrice;
-      getIdByFunction("total").innerText = totalShopping;
-    } else {
-      alert("Your Coupon is not valid!🥵");
-      getIdByFunction("couponCode").value = "";
-    }
+  if (getDiscountCoupon === "SELL200") {
+    getIdByFunction("couponCode").value = "";
+    const discountPrice = getTotalPrice * (20 / 100);
+    getIdByFunction("discount").innerText = `-${discountPrice.toFixed(2)}`;
+    const totalShopping = getTotalPrice - discountPrice;
+    getIdByFunction("total").innerText = totalShopping;
   } else {
-    alert("You must shop for less than 200!😁");
+    alert("Your Coupon is not valid!🥵");
     getIdByFunction("couponCode").value = "";
   }
 };
 getIdByFunction("coupon-btn").addEventListener("click", couponApplyButton);
 
-// make purchase
-// TODO button disabled empty
 getIdByFunction("make-purchase").addEventListener("click", () => {
   getIdByFunction("modal-hide").style.display = "block";
 });

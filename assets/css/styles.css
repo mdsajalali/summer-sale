@@ -99,12 +99,15 @@
 /* hero section code end here */
 
 /* main section code start here */
-.main {
+
+main {
   background: #f8f8f8;
+  display: flex;
 }
+
 .item-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
@@ -127,7 +130,6 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   width: 260px;
   margin: 0 auto;
-  height: 330px;
 }
 
 .items-card img {
@@ -176,8 +178,8 @@
   padding-bottom: 100px;
 }
 
-.sportswear {
-  margin-top: -220px;
+.product-container {
+  margin-top: 160px;
 }
 
 .coupon {
@@ -185,16 +187,16 @@
   background: #fff;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  width: 300px;
   margin: 0 auto;
   height: 130px;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .coupon h1 {
   color: #111;
   font-size: 24px;
   font-weight: 500;
-  margin-top: -80px;
   text-align: left;
 }
 
@@ -203,13 +205,13 @@
   border-radius: 8px;
   border: 1px solid rgba(17, 17, 17, 0.15);
   background: #fff;
-  margin-top: -20px;
+  margin-top: 10px;
 }
 
 .coupon-area input {
   padding: 0 5px;
   font-size: 16px;
-  width: 180px;
+  width: 100%;
 }
 
 .coupon-area .coupon-btn {
@@ -220,7 +222,6 @@
   border-radius: 8px;
   border: 1px solid rgba(17, 17, 17, 0.15);
   background: #fff;
-  margin-top: 20px;
   padding: 10px;
 }
 
@@ -238,18 +239,31 @@ hr {
   margin-bottom: 20px;
 }
 
-.product-price{
-  color: rgba(17, 17, 17, 0.50);
+.product-price {
+  color: rgba(17, 17, 17, 0.5);
+}
+
+.purchase-btn {
+  width: 100%;
 }
 
 /* main section code end here */
 
+@media screen and (max-width: 1200px) {
+  .product-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+
+  main {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 1120px) {
   .main-container {
     padding: 0 50px;
-  }
-  .item-container {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -291,8 +305,13 @@ hr {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 615px) {
   .item-container {
     grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 460px) {
+  .product-container {
+    max-width: 300px;
   }
 }

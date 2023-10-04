@@ -89,13 +89,38 @@
                   <button class="btn btn-add">Add To Cart</button>
                 </div>
               </div>
+
+              <div class="product-container">
+                <div class="coupon">
+                  <h1>Have coupon?</h1>
+                  <div class="coupon-area">
+                    <input type="text" placeholder="Coupon code" />
+                    <button class="btn coupon-btn">Apply</button>
+                  </div>
+                </div>
+                <div class="purchase-card">
+                  <div class="product-title">
+                    <p>1. Home Cooker</p>
+                    <p>2. Home Cooker</p>
+                    <p>3. Home Cooker</p>
+                    <hr />
+                    <p>
+                      Total price : <span class="product-price">257.00TK</span>
+                    </p>
+                    <p>Discount : <span class="product-price">51.40TK</span></p>
+                    <p>Total : <span class="product-price">205.00TK</span></p>
+                    <hr />
+                  </div>
+                  <button class="btn purchase-btn">Make Purchase</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!-- Kitchenware section end -->
 
         <!-- Sportswear section start -->
-        <div class="main-container">
+        <div class="main-container sportswear">
           <h1>Sportswear</h1>
           <div class="main-content">
             <div class="item-container">
@@ -204,30 +229,6 @@
         </div>
         <!-- Furniture section end -->
       </div>
-      <!-- product card -->
-
-      <div class="product-container">
-        <div class="coupon">
-          <h1>Have coupon?</h1>
-          <div class="coupon-area">
-            <input type="text" placeholder="Coupon code" />
-            <button class="btn coupon-btn">Apply</button>
-          </div>
-        </div>
-        <div class="purchase-card">
-          <div class="product-title">
-            <p>1. Home Cooker</p>
-            <p>2. Home Cooker</p>
-            <p>3. Home Cooker</p>
-            <hr />
-            <p>Total price : <span class="product-price">257.00TK</span></p>
-            <p>Discount : <span class="product-price">51.40TK</span></p>
-            <p>Total : <span class="product-price">205.00TK</span></p>
-            <hr />
-          </div>
-          <button class="btn purchase-btn">Make Purchase</button>
-        </div>
-      </div>
     </main>
     <!-- main section code end here -->
 
@@ -235,3 +236,312 @@
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+.btn {
+  border-radius: 8px;
+  background: #e527b2;
+  color: white;
+  padding: 12px 25px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.btn:hover {
+  background: #149fe6;
+}
+
+/* hero section code start here */
+
+.hero {
+  background: #f9f6e2;
+}
+
+.hero-container,
+.main-container {
+  max-width: 1150px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80vh;
+}
+
+.hero-content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero-content .hero-heading {
+  color: #111;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.hero-content .hero-title {
+  color: #111;
+  font-size: 50px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.hero-content .discount-off {
+  color: #e527b2;
+  font-family: Work Sans;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.discount .promo-title {
+  color: #111;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.hero-img {
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img img {
+  width: 100%;
+}
+
+/* hero section code end here */
+
+/* main section code start here */
+.main {
+  background: #f8f8f8;
+}
+.item-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.main-content {
+  text-align: center;
+}
+
+.main-container h1 {
+  color: #111;
+  font-size: 40px;
+  font-weight: 600;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+.items {
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 260px;
+  margin: 0 auto;
+  height: 330px;
+}
+
+.items-card img {
+  border-radius: 8px;
+  background: rgba(17, 17, 17, 0.05);
+  width: 200px;
+  height: 150px;
+  padding: 20px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.items-card .star {
+  margin-top: 10px;
+}
+
+.items-card .star i {
+  color: #ffc107;
+  margin-left: 3px;
+}
+
+.items-card .item-name {
+  color: #111;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.items-card .price {
+  color: rgba(17, 17, 17, 0.5);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.btn-add {
+  padding: 8px 18px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.btn-add:hover {
+  letter-spacing: 1px;
+}
+
+.furniture-bottom {
+  padding-bottom: 100px;
+}
+
+.sportswear {
+  margin-top: -220px;
+}
+
+.coupon {
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 300px;
+  margin: 0 auto;
+  height: 130px;
+}
+
+.coupon h1 {
+  color: #111;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: -80px;
+  text-align: left;
+}
+
+.coupon-area {
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid rgba(17, 17, 17, 0.15);
+  background: #fff;
+  margin-top: -20px;
+}
+
+.coupon-area input {
+  padding: 0 5px;
+  font-size: 16px;
+  width: 180px;
+}
+
+.coupon-area .coupon-btn {
+  padding: 8px 15px;
+}
+
+.purchase-card {
+  border-radius: 8px;
+  border: 1px solid rgba(17, 17, 17, 0.15);
+  background: #fff;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.product-title p {
+  color: #111;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+hr {
+  background: rgba(17, 17, 17, 0.15);
+  margin-bottom: 20px;
+}
+
+.product-price {
+  color: rgba(17, 17, 17, 0.5);
+}
+
+/* main section code end here */
+
+@media screen and (max-width: 1120px) {
+  /* .items {
+    order: 2;
+  }
+  .product-container {
+    order: 1;
+  } */
+  .main-container {
+    padding: 0 50px;
+  }
+  .item-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-content {
+    max-width: 450px;
+  }
+
+  .discount .promo-title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .item-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 870px) {
+  .hero-wrapper {
+    flex-wrap: wrap;
+  }
+  .hero-img {
+    order: 1;
+    max-width: 500px;
+    margin: 50px auto;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+
+  .discount {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .item-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,3 +1,12 @@
-# b8a5-summer-sale-mdsajalali
+# Summer-Sale
 
-#### Live Link: [summer-sale](https://classy-gelato-d14979.netlify.app/)
+> Summer Sale Shop website
+
+#### Live Link: [summer-sale](https://mdsajalali.github.io/summer-sale/)
+
+## Used Technology
+
+- [x] HTML
+- [x] CSS
+- [x] JAVASCRIPT
+- [x] Google Fonts [Work Sans]
